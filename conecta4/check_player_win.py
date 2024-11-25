@@ -1,8 +1,3 @@
-points = {
-        "r": 0,
-        "y": 0
-    }  
-
 def check_diagonal_right(board):
     for rows in range(len(board)-1,-1,-1):
         for columns in range(len(board)+1):
@@ -91,6 +86,11 @@ def check_horizontal(board):
                 conr = 0
                 cony = 0
     return None
+
+points = {
+        "r": 0,
+        "y": 0
+    }  
 
 def score(board, points):
     if check_vertical(board) == "r" or check_horizontal(board) == "r" or check_diagonal_right == "r" or check_diagonal_left == "r":
