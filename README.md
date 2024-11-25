@@ -23,7 +23,7 @@ To run the game, ensure you have Python installed and follow these steps:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourUsername/connect4.git
+git clone https://github.com/Alxcccc/connect4.git
 ```
 
 Navigate to the project directory:
