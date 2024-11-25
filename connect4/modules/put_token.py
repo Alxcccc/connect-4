@@ -1,4 +1,4 @@
-from board import board, print_board
+from connect4.modules.board import board, print_board
 
 def put_token_user(user: str):
     while True:
