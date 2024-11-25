@@ -1,6 +1,6 @@
-from connect4.modules.board import reset_board
-from connect4.modules.check_player_win import *
-from connect4.modules.put_token import *
+from Connect4.modules.board import reset_board
+from Connect4.modules.check_player_win import *
+from Connect4.modules.put_token import *
 import os   
 
 tokens = ["red", "yellow"]
