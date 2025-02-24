@@ -22,6 +22,7 @@ class PlayGame(Strategy):
             if self.win.check_win() == None:
                 self.turn = "B"
                 self.do_algorithm()
+                return None
             self.punctuation.show()
             input()
             self.board.reset_matrix()

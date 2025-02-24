@@ -14,11 +14,11 @@ class CheckWinner():
         if self.check_vertical() == "R" or self.check_horizontal() == "R" or self.check_diagonal_right() == "R" or self.check_diagonal_left() == "R":
             self.punctuation.increment_points(user="R")
             print("The winner is Red")
-            return "R"
+            return True
         elif self.check_vertical() == "B" or self.check_horizontal() == "B" or self.check_diagonal_right() == "B" or self.check_diagonal_left() == "B":
             self.punctuation.increment_points(user="B")
             print("The winner is Blue")
-            return "B"
+            return True
         else:
             return None
         
