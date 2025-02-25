@@ -15,28 +15,27 @@ class PlayGame(Strategy):
     def do_algorithm(self):
         if self.options() == True:
             return None
-        self.board.show_matrix()
-        self.punctuation.show()
-        if self.turn == "R":
-            self.board.put_token(self.turn)
-            if self.win.check_win() == None:
+        
+        while True:
+            self.board.show_matrix()
+            self.punctuation.show()
+            if self.turn == "R":
+                self.board.put_token(self.turn)
+                if self.win.check_win() is not None:
+                    self.punctuation.show()
+                    input()
+                    self.board.reset_matrix()
+                    break
                 self.turn = "B"
-                self.do_algorithm()
-                return None
-            self.punctuation.show()
-            input()
-            self.board.reset_matrix()
-            return None
             
-        else: 
-            self.board.put_token(self.turn)
-            if self.win.check_win() == None:
+            else: 
+                self.board.put_token(self.turn)
+                if self.win.check_win() is not None:
+                    self.punctuation.show()
+                    input()
+                    self.board.reset_matrix()
+                    break
                 self.turn = "R"
-                self.do_algorithm()
-            self.punctuation.show()
-            input()
-            self.board.reset_matrix()
-            return None
         
     def options(self):
         opcion = input("If you want to reset the match you should write 'r' or if you want to exit of match you should write 'e' and if just want to continue with the match press enter: ").strip()
